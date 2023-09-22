@@ -303,6 +303,7 @@ a:hover{
 
 .house-room-option:hover {
     background-color: rgb(0,0,0);
+    transition: background-color 1s;
 }
 
 /*Profile*/
