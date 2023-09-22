@@ -10,7 +10,7 @@ export default function App(){
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/rpg" element={<Home/>}/>
         <Route path="/cc" element={<Cc/>}/>
         <Route path="/house0" element={<House0/>}/>
         <Route path="/profile" element={<Profile/>}/>
