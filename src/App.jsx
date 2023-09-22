@@ -8,7 +8,7 @@ import { Profile } from "./routes/houses/profile"
 
 export default function App(){
   return (
-    <Router>
+    <Router basename="rpg">
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/cc" element={<Cc/>}/>
