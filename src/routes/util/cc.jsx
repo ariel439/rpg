@@ -1,3 +1,4 @@
+<script src="./src/objects/player.js"></script>
 import { useRef } from "react"
 import leftArrow from "../../icons/left-arrow.png"
 import rightArrow from "../../icons/right-arrow.png"
