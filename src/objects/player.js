@@ -76,7 +76,6 @@ let player = {
             default:
                 break;
         }
-        return player;
     },
     
     sleep() {
@@ -100,5 +99,5 @@ let player = {
             }
         }
         this.lastMeditation = this.day;
-    }
+    },
   }
