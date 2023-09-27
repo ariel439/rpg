@@ -8,8 +8,9 @@ import female from "../../icons/female.png"
 import human from "../../icons/human.png"
 
 export const Profile = () => {
+    console.clear();
+    console.log(player);
     //vars
-    let player = JSON.parse(localStorage.getItem("player"));
     const navigate = useNavigate();
     let gender = male;
     let race = human;
@@ -62,7 +63,7 @@ export const Profile = () => {
                     <div className="profile-stat">Strength: {player.str}</div>
                     <div className="profile-stat">Intelligence: {player.int}</div>
                     <div className="profile-stat">Charisma: {player.chr}</div>
-                    <div className="profile-stat">Fishing: {player.fishing}</div>
+                    <div className="profile-stat">Day: {player.day}</div>
                     <div className="profile-stat">Fishing: {player.fishing}</div>
                     <div className="profile-stat">Fishing: {player.fishing}</div>
                     <div className="profile-stat">Fishing: {player.fishing}</div>

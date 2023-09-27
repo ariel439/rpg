@@ -1,15 +1,12 @@
 import { useRef } from "react"
-import {selectPreset} from "../functions/player"
-import leftArrow from "../icons/left-arrow.png"
-import rightArrow from "../icons/right-arrow.png"
-import char1 from "../imgs/char/char1.png"
-import char2 from "../imgs/char/char2.png"
+import leftArrow from "../../icons/left-arrow.png"
+import rightArrow from "../../icons/right-arrow.png"
+import char1 from "../../imgs/char/char1.png"
+import char2 from "../../imgs/char/char2.png"
 import { useNavigate } from "react-router-dom"
 
 export const Cc = () => {
-
     //variables
-    let player = JSON.parse(localStorage.getItem("player"));
     let preset = 0;
     const textPreset0 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam porro ea possimus eveniet perspiciatis, hic nisi accusamus tempora, quos quae fugiat eum dolor expedita aliquam blanditiis temporibus repellat ipsa!";
     const textPreset1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam porro ea possimus eveniet perspiciatis, hic nisi accusamus tempora, quos quae fugiat eum dolor expedita aliquam blanditiis temporibus repellat ipsa!";
@@ -21,18 +18,19 @@ export const Cc = () => {
     function backward() {
         if (preset == 1){
             preset = 0;
-            refPreset0.current.scrollIntoView({behavior: "smooth"});
+            refPreset0.current.style.display = "flex";
+            refPreset1.current.style.display = "none";
         }
     }
     function foward() {
         if(preset == 0){
             preset = 1;
-            refPreset1.current.scrollIntoView({behavior: "smooth"});
+            refPreset0.current.style.display = "none";
+            refPreset1.current.style.display = "flex";
         }
     }
     function confirmPreset(){
-        player = selectPreset(player, preset);
-        localStorage.setItem('player',JSON.stringify(player));
+        player.selectPreset(preset);
         navigate("/house0");
     }
 
