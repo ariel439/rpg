@@ -81,7 +81,6 @@ let player = {
     sleep() {
         this.sta = this.maxSta;
         this.day += 1;
-        localStorage.setItem('player',JSON.stringify(player));
     },
     
     meditate() {
