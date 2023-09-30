@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Player } from "../../objects/Player"
 import returnIcon from "../../icons/left-arrow.png"
 import hpIcon from "../../icons/hp.png"
 import manaIcon from "../../icons/mana.png"
@@ -6,14 +7,18 @@ import staIcon from "../../icons/sta.png"
 import male from "../../icons/male.png"
 import female from "../../icons/female.png"
 import human from "../../icons/human.png"
+import char1 from "../../imgs/char/char1.png";
+import char2 from "../../imgs/char/char2.png";
 
 export const Profile = () => {
-    console.clear();
-    console.log(player);
+    //load player
+    let player = new Player();
+    player.load();
     //vars
     const navigate = useNavigate();
     let gender = male;
     let race = human;
+    let playerImg;
     //functions
     function back() {
         navigate(-1);
@@ -30,6 +35,14 @@ export const Profile = () => {
             race = human;
         }
     }
+    function setImage () {
+        if (player.preset == 0){
+            playerImg = char1;
+        } else if (player.preset == 1){
+            playerImg = char2;
+        }
+    }
+    setImage();
     selectGender();
     selectRace();
     //html
@@ -40,7 +53,7 @@ export const Profile = () => {
                 <div className="profile-return"><img src={returnIcon} onClick={back}/></div>
                 <div className="profile-name-text"><h1>{player.name} {player.surname}</h1></div>
             </div>
-            <div className="profile-img"><img src={player.img}></img></div>
+            <div className="profile-img"><img src={playerImg}></img></div>
             <div className="profile-resources">
                 <img src={hpIcon}/>
                 <p>{player.hp}/{player.maxHp}</p>

@@ -8,7 +8,7 @@ import { Profile } from "./routes/houses/profile"
 import { Sleep } from "./routes/houses/sleep"
 import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
 import { QuestLog } from "./routes/houses/quest-log"
-import { Meditate } from "./routes/houses/components/meditate"
+import { Meditate } from "./routes/houses/meditate"
 import { VVInteract } from "./routes/regions/vaspon-island/vv-interact"
 
 export default function App(){

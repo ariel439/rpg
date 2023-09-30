@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { Player } from "../../objects/Player";
 
 export const Sleep = () => {
+    //load player
+    let player = new Player();
+    player.load();
     //vars
     const navigate = useNavigate();
     //functions
     function sleepContinue () {
         player.sleep();
+        player.save(player);
         navigate(-1);
     }
     //html

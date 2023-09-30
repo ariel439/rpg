@@ -1,8 +1,12 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import meditateImg from "../../../icons/meditate.png"
+import { Player } from "../../objects/Player"
+import meditateImg from "../../icons/meditate.png"
 
 export const Meditate = () => {
+    //load player
+    let player = new Player();
+    player.load();
     //vars
     const navigate = useNavigate();
     //functions
@@ -16,6 +20,7 @@ export const Meditate = () => {
         }
     })
     function meditateContinue () {
+        player.save(player);
         navigate(-1);
     }
     //html

@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import { Player } from "../../objects/Player"
 import leftArrow from "../../icons/left-arrow.png"
 import rightArrow from "../../icons/right-arrow.png"
 import char1 from "../../imgs/char/char1.png"
@@ -7,6 +8,7 @@ import { useNavigate } from "react-router-dom"
 
 export const Cc = () => {
     //variables
+    let player = new Player();
     let preset = 0;
     const textPreset0 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam porro ea possimus eveniet perspiciatis, hic nisi accusamus tempora, quos quae fugiat eum dolor expedita aliquam blanditiis temporibus repellat ipsa!";
     const textPreset1 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magnam porro ea possimus eveniet perspiciatis, hic nisi accusamus tempora, quos quae fugiat eum dolor expedita aliquam blanditiis temporibus repellat ipsa!";
@@ -31,6 +33,7 @@ export const Cc = () => {
     }
     function confirmPreset(){
         player.selectPreset(preset);
+        player.save(player);
         navigate("/house0");
     }
 

@@ -1,9 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import backIcon from "../../icons/left-arrow.png"
+import { Player } from "../../objects/Player"
 import { getQuestDesc } from "../../text/quest-desc";
 
 export const QuestLog = () => {
+    //load player
+    let player = new Player();
+    player.load();
     //vars
     const navigate = useNavigate();
     let questsToDisplay = [];
