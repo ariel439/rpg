@@ -7,18 +7,17 @@ import staIcon from "../../icons/sta.png"
 import male from "../../icons/male.png"
 import female from "../../icons/female.png"
 import human from "../../icons/human.png"
-import char1 from "../../imgs/char/char1.png";
-import char2 from "../../imgs/char/char2.png";
 
 export const Profile = () => {
     //load player
     let player = new Player();
     player.load();
+    console.clear();
+    console.log(player);
     //vars
     const navigate = useNavigate();
     let gender = male;
     let race = human;
-    let playerImg;
     //functions
     function back() {
         navigate(-1);
@@ -35,14 +34,6 @@ export const Profile = () => {
             race = human;
         }
     }
-    function setImage () {
-        if (player.preset == 0){
-            playerImg = char1;
-        } else if (player.preset == 1){
-            playerImg = char2;
-        }
-    }
-    setImage();
     selectGender();
     selectRace();
     //html
@@ -53,7 +44,7 @@ export const Profile = () => {
                 <div className="profile-return"><img src={returnIcon} onClick={back}/></div>
                 <div className="profile-name-text"><h1>{player.name} {player.surname}</h1></div>
             </div>
-            <div className="profile-img"><img src={playerImg}></img></div>
+            <div className="profile-img"><img src={player.img}/></div>
             <div className="profile-resources">
                 <img src={hpIcon}/>
                 <p>{player.hp}/{player.maxHp}</p>
@@ -68,20 +59,19 @@ export const Profile = () => {
                 <div className="profile-info-box"><p>{player.age}</p></div>
                 <div className="profile-info-box"><img src={gender}/></div>
                 <div className="profile-info-box"><img src={race}/></div>
+                <div className="profile-info-box"><p>PH</p></div>
             </div>
             <div className="profile-stats">
-                <div className="profile-stats-title"><h2>Stats</h2></div>
+                <div className="profile-stats-date"><h2>{player.getweekday()}, {player.day}/{player.month}/{player.year}</h2></div>
                 <div className="profile-stats-list">
                     <div></div>
                     <div className="profile-stat">Strength: {player.str}</div>
                     <div className="profile-stat">Intelligence: {player.int}</div>
                     <div className="profile-stat">Charisma: {player.chr}</div>
-                    <div className="profile-stat">Day: {player.day}</div>
                     <div className="profile-stat">Fishing: {player.fishing}</div>
-                    <div className="profile-stat">Fishing: {player.fishing}</div>
-                    <div className="profile-stat">Fishing: {player.fishing}</div>
-                    <div className="profile-stat">Fishing: {player.fishing}</div>
-                    <div><p></p></div>
+                    <div className="profile-stat">Min Damage: {player.minDamage}</div>
+                    <div className="profile-stat">Max Damage: {player.maxDamage}</div>
+                    <div></div>
                 </div>
             </div>
         </div>

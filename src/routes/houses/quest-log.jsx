@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import backIcon from "../../icons/left-arrow.png"
 import { Player } from "../../objects/Player"
 import { getQuestDesc } from "../../text/quest-desc";
+import backIcon from "../../icons/left-arrow.png"
 
 export const QuestLog = () => {
     //load player
@@ -19,7 +19,7 @@ export const QuestLog = () => {
     }
     function createlist() {
         player.quests.forEach(quest => {
-            if (quest.step != 0){
+            if (quest.step > 0 && quest.step < 99){
                 questsToDisplay.push(quest);
             }
         });

@@ -6,10 +6,11 @@ import { Credits } from "./routes/util/credits"
 import { House0 } from "./routes/houses/house0"
 import { Profile } from "./routes/houses/profile"
 import { Sleep } from "./routes/houses/sleep"
-import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
 import { QuestLog } from "./routes/houses/quest-log"
 import { Meditate } from "./routes/houses/meditate"
-import { VVInteract } from "./routes/regions/vaspon-island/vv-interact"
+import { Inventory } from "./routes/houses/inventory"
+import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
+import { Vaspon } from "./routes/regions/vaspon-island/vaspon"
 
 export default function App(){
   return (
@@ -22,8 +23,9 @@ export default function App(){
         <Route path="/quest-log" element={<QuestLog/>}/>
         <Route path="/sleep" element={<Sleep/>}/>
         <Route path="/meditate" element={<Meditate/>}/>
+        <Route path="/inventory" element={<Inventory/>}/>
         <Route path="/vaspon-village" element={<VasponVillage/>}/>
-        <Route path="/vv-interact" element={<VVInteract/>}/>
+        <Route path="/vaspon" element={<Vaspon/>}/>
         <Route path="/credits" element={<Credits/>}/>
       </Routes>
     </Router>

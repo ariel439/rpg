@@ -5,6 +5,7 @@ import rightArrow from "../../icons/right-arrow.png"
 import char1 from "../../imgs/char/char1.png"
 import char2 from "../../imgs/char/char2.png"
 import { useNavigate } from "react-router-dom"
+import Swal from 'sweetalert2'
 
 export const Cc = () => {
     //variables
@@ -15,8 +16,8 @@ export const Cc = () => {
     const refPreset0 = useRef(null);
     const refPreset1 = useRef(null);
     const navigate = useNavigate();
-    
-    //functions
+
+    //navigate
     function backward() {
         if (preset == 1){
             preset = 0;
@@ -31,10 +32,23 @@ export const Cc = () => {
             refPreset1.current.style.display = "flex";
         }
     }
+
+    //confirm function
     function confirmPreset(){
-        player.selectPreset(preset);
-        player.save(player);
-        navigate("/house0");
+        Swal.fire({
+            title: "Confirm",
+            text: "Are you sure you want to create this character?",
+            color: "white",
+            showCancelButton: true,
+            cancelButtonText: "No",
+            confirmButtonText: "Yes",
+        }).then((result) => {
+            if(result.isConfirmed){
+                player.selectPreset(preset);
+                player.save(player);
+                navigate("/house0");
+            }
+        })
     }
 
     //html

@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export const PlaceLocation = ({name,img,loc}) => {
+export const PlaceOption = ({name,img,loc}) => {
     //vars
     const navigate = useNavigate();
     //functions
@@ -9,7 +9,7 @@ export const PlaceLocation = ({name,img,loc}) => {
     }
     //html
     return (
-        <div className="place-location">
+        <div className="place-option">
             <img src={img} onClick={openSleep}></img>
             <h2>{name}</h2>
         </div>
