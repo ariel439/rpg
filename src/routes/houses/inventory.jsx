@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { Player } from "../../objects/Player"
-import backIcon from "../../icons/left-arrow.png"
+import backIcon from "../../icons/return.png"
+import money from "../../icons/money.png"
+import weight from "../../icons/weight.png"
 
 export const Inventory = () => {
     //load player
@@ -21,8 +23,8 @@ export const Inventory = () => {
                 </div>
                 <div className="inventory-list"></div>
                 <div className="inventory-info">
-                    <div className="inventory-gold"><img src={backIcon}/> {player.money}</div>
-                    <div className="inventory-weight"><img src={backIcon}/>{player.weight} / {player.maxWeight} kg</div>
+                    <div className="inventory-money"><img src={money}/> {player.money}</div>
+                    <div className="inventory-weight"><img src={weight}/>{player.weight} / {player.maxWeight} kg</div>
                 </div>
             </div>
             <div className="inventory-right"></div>

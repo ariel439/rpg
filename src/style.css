@@ -486,7 +486,7 @@ a:hover{
         opacity: 0%;
     }
     to {
-        opcaity: 100%;
+        opacity: 100%;
     }
 }
 
@@ -544,7 +544,6 @@ a:hover{
 .place-title div {
     height: 100%;
     width: 10%;
-    margin-right: auto;
 }
 
 .place-title h1 {
@@ -554,7 +553,6 @@ a:hover{
 .place-title img{
     height: 100%;
     width: 10%;
-    margin-left: auto;
     padding: 2vmin;
     cursor: pointer;
     opacity: 80%;
@@ -725,7 +723,7 @@ a:hover{
         opacity: 0%;
     }
     to {
-        opcaity: 100%;
+        opacity: 100%;
     }
 }
 
@@ -816,17 +814,17 @@ a:hover{
 }
 
 .inventory-info img {
-    width: 12%;
+    width: 11%;
     height: 50%;
 }
 
-.inventory-gold {
+.inventory-money {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
     height: 100%;
-    gap: 1.5%;
+    gap: 3%;
 }
 
 .inventory-weight {
@@ -835,5 +833,5 @@ a:hover{
     justify-content: center;
     width: 50%;
     height: 100%;
-    gap: 1.5%;
+    gap: 3%;
 }

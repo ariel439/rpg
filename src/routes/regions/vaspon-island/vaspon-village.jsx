@@ -24,7 +24,7 @@ export const VasponVillage = () => {
                 <div></div>
                 {player.houses[0].owned == true ? <PlaceOption name="House" img={vHouse} loc="/house0"/>: null} 
                 <PlaceOption name="Castle" img={vCastle}/>
-                <PlaceOption name="Shop" img={vShop}/>
+                <PlaceOption name="Shop" img={vShop} loc="/vaspon-village-shop"/>
                 <PlaceOption name="Docks" img={vDocks}/>
                 <div></div>
             </div>

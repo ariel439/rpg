@@ -10,6 +10,7 @@ import { QuestLog } from "./routes/houses/quest-log"
 import { Meditate } from "./routes/houses/meditate"
 import { Inventory } from "./routes/houses/inventory"
 import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
+import { VasponVillageShop } from "./routes/regions/vaspon-island/vv-shop"
 import { Vaspon } from "./routes/regions/vaspon-island/vaspon"
 
 export default function App(){
@@ -25,6 +26,7 @@ export default function App(){
         <Route path="/meditate" element={<Meditate/>}/>
         <Route path="/inventory" element={<Inventory/>}/>
         <Route path="/vaspon-village" element={<VasponVillage/>}/>
+        <Route path="/vaspon-village-shop" element={<VasponVillageShop/>}/>
         <Route path="/vaspon" element={<Vaspon/>}/>
         <Route path="/credits" element={<Credits/>}/>
       </Routes>
