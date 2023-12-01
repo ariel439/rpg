@@ -835,3 +835,137 @@ a:hover{
     height: 100%;
     gap: 3%;
 }
+
+.dialogue {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.dialogue-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    overflow: auto;
+}
+
+.player-dialogue-box {
+    display: flex;
+    align-self: flex-start;
+    width: 60%;
+    height: 25%;
+    flex-shrink: 0;
+    margin-left: 5%;
+}
+
+.player-dialogue-image {
+    width: 20%;
+    height: 100%;
+}
+
+.player-dialogue-text {
+    width: 70%;
+    height: 100%;
+    background-color: rgb(20,20,20);
+    padding: 2%;
+    overflow: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.npc-dialogue-box {
+    display: flex;
+    align-self: flex-end;
+    justify-content: flex-end;
+    width: 60%;
+    height: 25%;
+    flex-shrink: 0;
+    margin-right: 5%;
+}
+
+.npc-dialogue-text{
+    width: 70%;
+    height: 100%;
+    background-color: rgb(20,20,20);
+    padding: 2%;
+    overflow: auto;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.npc-dialogue-image {
+    width: 20%;
+    height: 100%;
+}
+
+.dialogue-option-box {
+    display: flex;
+    width: 35%;
+    height: 15%;
+    background-color: rgb(20,20,20);
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.dialogue-option-box img {
+    width: 80%;
+    height: 40%;
+    cursor: pointer;
+}
+
+.dialogue-option-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.dialogue-option-left:hover{
+    opacity: 100%;
+}
+
+.dialogue-options {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.dialogue-options h1{
+    cursor: pointer;
+}
+
+.dialogue-option-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 100%;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.dialogue-option-right:hover{
+    opacity: 100%;
+}
+
+.dialogue-option {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 4vmin;
+    flex-shrink: 0;
+}

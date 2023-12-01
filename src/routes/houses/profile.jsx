@@ -34,6 +34,7 @@ export const Profile = () => {
             race = human;
         }
     }
+
     selectGender();
     selectRace();
     //html
@@ -48,8 +49,11 @@ export const Profile = () => {
             <div className="profile-resources">
                 <img src={hpIcon}/>
                 <p>{player.hp}/{player.maxHp}</p>
-                <img src={manaIcon}/>
-                <p>{player.mana}/{player.maxMana}</p>
+                {(() => {
+                    if (player.quests[0].step == 99) {
+                        return <ManaTab mana={player.mana} maxMana={player.maxMana}/>;
+                    }
+                })()}
                 <img src={staIcon}/>
                 <p>{player.sta}/{player.maxSta}</p>
             </div>
@@ -76,5 +80,14 @@ export const Profile = () => {
             </div>
         </div>
     </div>
+    )
+}
+
+const ManaTab = ({mana, maxMana}) => {
+    return(
+        <>
+            <img src={manaIcon}/>
+            <p>{mana}/{maxMana}</p>
+        </>
     )
 }

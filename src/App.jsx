@@ -12,6 +12,7 @@ import { Inventory } from "./routes/houses/inventory"
 import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
 import { VasponVillageShop } from "./routes/regions/vaspon-island/vv-shop"
 import { Vaspon } from "./routes/regions/vaspon-island/vaspon"
+import { Dialogue } from "./routes/mechanics/interact/interact"
 
 export default function App(){
   return (
@@ -28,6 +29,7 @@ export default function App(){
         <Route path="/vaspon-village" element={<VasponVillage/>}/>
         <Route path="/vaspon-village-shop" element={<VasponVillageShop/>}/>
         <Route path="/vaspon" element={<Vaspon/>}/>
+        <Route path="/dialogue" element={<Dialogue/>}/>
         <Route path="/credits" element={<Credits/>}/>
       </Routes>
     </Router>

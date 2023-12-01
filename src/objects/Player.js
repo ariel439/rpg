@@ -33,9 +33,11 @@ export class Player {
         this.fishingtoToLevel = 100;
         this.lastMeditation = -1;
         this.money = 0;
-        this.inventory = []
+        this.inventory = [];
         this.weight = 0;
         this.maxWeight = 20;
+        this.contacts = [];
+        this.interacting = "";
         this.houses = [
           {
             id: 0,
@@ -94,6 +96,8 @@ export class Player {
         this.inventory = player.inventory;
         this.weight = player.weight;
         this.maxWeight = player.maxWeight;
+        this.interacting = player.interacting;
+        this.contacts = player.contacts;
         this.houses = player.houses;
         this.quests = player.quests;
     }
@@ -201,5 +205,9 @@ export class Player {
             }
         }
         this.lastMeditation = this.playedDays;
+    }
+
+    meetPerson(person) {
+        this.contacts.push(person);
     }
   }
