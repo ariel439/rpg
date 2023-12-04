@@ -74,9 +74,11 @@ a:hover{
 }
 
 /*Character creation*/
+/*100vw bugs at least in my screen*/
+
 .cc {
     display: flex;
-    width: 100vw;
+    width: 99.9vw;
     height: 100vh;
 }
 
@@ -255,7 +257,7 @@ a:hover{
 .house-room {
     display: flex;
     flex-direction: column;
-    width: 33%;
+    width: 28%;
     height: 100%;
     font-family: satisfy;
     flex-shrink: 0;
@@ -269,7 +271,7 @@ a:hover{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 30%;
+    height: 25%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -281,7 +283,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 70%;
+    height: 75%;
     overflow: auto;
     gap: 0.5%;
 }
@@ -876,7 +878,7 @@ a:hover{
     padding: 2%;
     overflow: auto;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 12px;
+    font-size: 1.3vmin;
     font-style: italic;
 }
 
@@ -897,7 +899,7 @@ a:hover{
     padding: 2%;
     overflow: auto;
     font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 12px;
+    font-size: 1.3vmin;
     font-style: italic;
 }
 
@@ -968,4 +970,54 @@ a:hover{
     width: 100%;
     font-size: 4vmin;
     flex-shrink: 0;
+}
+
+/*MOBILE VERSION*/
+@media (max-width: 450px) {
+    /*Character creation*/
+    .preset {
+        flex-direction: column;
+    }
+    .preset-left {
+        width: 100%;
+    }
+    .preset-right {
+        width: 100%;
+    }
+    /*House*/
+    .house {
+        scroll-snap-type: x mandatory;
+    }
+    .house-room {
+        width: 100%;
+        scroll-snap-align: center;
+    }
+    /*Profile*/
+    .profile {
+        flex-direction: column;
+    }
+    .profile-left{
+        width: 100%;
+        height: 50%;
+    }
+    .profile-right{
+        width: 100%;
+        height: 50%;
+    }
+    /*Place*/
+    .place-title img{
+        height: 60%;
+        width: 25%;
+    }
+    .place-options{
+        scroll-snap-type: x mandatory;
+    }
+    .place-option {
+        width: 100%;
+        height: 80%;
+        scroll-snap-align: center;
+    }
+    .place-option h2{
+        font-size: 15vmin;
+    }
 }

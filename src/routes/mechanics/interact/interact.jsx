@@ -11,6 +11,7 @@ export const Dialogue = () => {
     let player = new Player();
     player.load();
     //functions
+    //this functing will check if the npc is already on the player diary, then will fire hello if true or will save it in the diary and fire introduction.
     function checkIfKnown(){
         let check = false;
         player.contacts.forEach(contact => {
@@ -30,20 +31,35 @@ export const Dialogue = () => {
             introduction()
         }
     }
+    //This will fire from checkIfKnow if the player already know who is the npc it will set dialogues on the screen depending on the npc societyClass and relations in future.
     function hello() {
         useEffect(()=>{
-            setTexts([
-                ...texts,
-                { 
-                    text: "Hello " + player.interacting.name + ", how are you?",
-                    type: 1,
-                },{
-                    text: "Hello " + player.name + ", i'm doing fine thanks for asking!",
-                    type: 2 ,
-                }
-            ]);
+            if(player.interacting.societyClass == "Worker"){
+                setTexts([
+                    ...texts,
+                    { 
+                        text: "Hello " + player.interacting.name + ", how are you?",
+                        type: 1,
+                    },{
+                        text: "Hello " + player.name + ", i'm alright. Thanks for asking!",
+                        type: 2 ,
+                    }
+                ]);
+            } else if(player.interacting.societyClass == "Royalty"){
+                setTexts([
+                    ...texts,
+                    { 
+                        text: "Hello " + player.interacting.name + ", how are you?",
+                        type: 1,
+                    },{
+                        text: "Greetings " + player.name + "... I'm having an interesting day so far...",
+                        type: 2 ,
+                    }
+                ]);
+            }
         }, [])
     }
+    //this will fire from check if known and introduct both characters.
     function introduction() {
         useEffect(()=>{
             setTexts([

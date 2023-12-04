@@ -13,6 +13,9 @@ import { VasponVillage } from "./routes/regions/vaspon-island/vaspon-village"
 import { VasponVillageShop } from "./routes/regions/vaspon-island/vv-shop"
 import { Vaspon } from "./routes/regions/vaspon-island/vaspon"
 import { Dialogue } from "./routes/mechanics/interact/interact"
+import { VasponVillageCastle } from "./routes/regions/vaspon-island/vv-castle"
+import { VasponVillageDocks } from "./routes/regions/vaspon-island/vv-docks"
+import { VasponForest } from "./routes/regions/vaspon-island/vaspon-forest"
 
 export default function App(){
   return (
@@ -20,15 +23,22 @@ export default function App(){
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/cc" element={<Cc/>}/>
-        <Route path="/house0" element={<House0/>}/>
+
         <Route path="/profile" element={<Profile/>}/>
         <Route path="/quest-log" element={<QuestLog/>}/>
         <Route path="/sleep" element={<Sleep/>}/>
         <Route path="/meditate" element={<Meditate/>}/>
         <Route path="/inventory" element={<Inventory/>}/>
-        <Route path="/vaspon-village" element={<VasponVillage/>}/>
-        <Route path="/vaspon-village-shop" element={<VasponVillageShop/>}/>
+
         <Route path="/vaspon" element={<Vaspon/>}/>
+        <Route path="/vaspon-village" element={<VasponVillage/>}/>
+        <Route path="/house0" element={<House0/>}/>
+        <Route path="/vaspon-village-shop" element={<VasponVillageShop/>}/>
+        <Route path="/vaspon-village-castle" element={<VasponVillageCastle/>}/>
+        <Route path="/vaspon-village-docks" element={<VasponVillageDocks/>}/>
+        <Route path="/vaspon-village-docks" element={<VasponVillageDocks/>}/>
+        <Route path="/vaspon-forest" element={<VasponForest/>}/>
+
         <Route path="/dialogue" element={<Dialogue/>}/>
         <Route path="/credits" element={<Credits/>}/>
       </Routes>

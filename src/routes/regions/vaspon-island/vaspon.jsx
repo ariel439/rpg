@@ -9,7 +9,7 @@ export const Vaspon = () => {
             <div className="place-title"><h1>Vaspon Island</h1></div>
             <div className="place-options">
                 <PlaceOption name="Village" img={village} loc="/vaspon-village"/>
-                <PlaceOption name="Forest" img={forest} loc="/forest"/>
+                <PlaceOption name="Forest" img={forest} loc="/vaspon-forest"/>
             </div>
         </div>
     )
